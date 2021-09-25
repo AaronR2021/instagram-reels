@@ -1,0 +1,118 @@
+.videoSidebar {
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  color: white;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: rgba(22, 21, 21, 0.178);
+}
+.videoFooter__text {
+  width: 98%;
+}
+.VideoUserName {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+.VideoUserDescription {
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  padding-top: 0;
+  margin-bottom: 10px;
+  font-weight: 100;
+}
+.flex_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.songName {
+  font-size: 20px;
+  font-family: monospace;
+}
+.videoFooter_record {
+  width: 50px;
+  margin: 0;
+  padding: 0;
+  animation: recordSpinner 5s infinite linear;
+  filter: invert(1);
+}
+* {
+  overflow: hidden;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden;
+}
+
+@keyframes recordSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 200px) {
+  .videoSidebar {
+    bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.082);
+  }
+}
+
+@media screen and (min-height: 800px) {
+  .video_parent_container {
+    background-color: white;
+    position: relative;
+    height: 800px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .videoSidebar {
+    bottom: 40px;
+  }
+}
+
+@media screen and (min-height: 1000px) and (min-width: 700px) {
+  .VideoUserDescription {
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.705);
+    border-radius: 5px;
+  }
+  .VideoUserName {
+    font-size: 28px;
+    background-color: rgba(0, 0, 0, 0.705);
+    border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .VideoUserDescription {
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.705);
+    border-radius: 5px;
+  }
+  .VideoUserName {
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.705);
+    border-radius: 5px;
+  }
+  .songName {
+    font-size: 25;
+  }
+}
